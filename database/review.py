@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from datetime import date
 from database.business import Business
 
+
 @dataclass
 class Review:
     review_id: str
@@ -12,7 +13,8 @@ class Review:
     votes_cool: int
     review_text: str
 
-    business: Business #oppure business_id: str
+    business: Business
+    business_id: str
 
     def __eq__(self, other):
         return self.review_id == other.review_id
